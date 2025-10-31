@@ -6,7 +6,9 @@ const request2=axios.create({
     baseURL: 'http://127.0.0.1:1234/',
 }
 )
+
+const url = import.meta.env.VITE_API_URL
 const request1=axios.create({
-    baseURL: 'http://127.0.0.1:1234/api/',
+    baseURL: url ,
 })
 export {request,request1, request2} ;
