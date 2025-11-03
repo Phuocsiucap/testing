@@ -7,7 +7,7 @@ const request2=axios.create({
 }
 )
 
-const url = import.meta.env.VITE_API_URL + "api/"
+const url = import.meta.env.VITE_API_URL + "/api/"
 const request1=axios.create({
     baseURL: url ,
 })
