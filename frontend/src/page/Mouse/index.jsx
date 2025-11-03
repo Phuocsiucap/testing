@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../../page/Laptop/index.css";
+// import "../../page/Laptop/index.css";
 import { Link } from "react-router-dom";
 // import Image from "../../assets/images/introduction.jpg";
 // import Image1 from "../../assets/images/introduction1.jpg";
