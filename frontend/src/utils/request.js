@@ -1,13 +1,13 @@
 import axios from "axios";
 
 axios.defaults.withCredentials = true
-const request = 'http://127.0.0.1:1234/'
+const request = import.meta.env.VITE_API_URL
 const request2=axios.create({
-    baseURL: 'http://127.0.0.1:1234/',
+    baseURL: import.meta.env.VITE_API_URL,
 }
 )
 
-const url = import.meta.env.VITE_API_URL
+const url = import.meta.env.VITE_API_URL + "api/"
 const request1=axios.create({
     baseURL: url ,
 })

@@ -12,6 +12,12 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
+
+from dotenv import load_dotenv
+
+# Load file .env (nếu file nằm ở thư mục khác thì chỉ rõ đường dẫn)
+load_dotenv()
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 MEDIA_URL = '/media/'
@@ -21,10 +27,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-z=fzuyb&*q!itxsz@$&mpb=b3t!_#qjtq^p&=9l5@lv*r@6%h-'
-
+SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv("DEBUG")
 
 ALLOWED_HOSTS = ['*']
 
@@ -175,6 +180,7 @@ SIMPLE_JWT = {
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',  # Your React app URL
+    os.getenv("FRONT_URL")
 ]
 
 CORS_ALLOW_CREDENTIALS = True  # Allows sending cookies with requests
@@ -202,8 +208,8 @@ USE_TZ = True  # Bật hỗ trợ múi giờ
 
 
 
-VNPAY_RETURN_URL = 'http://localhost:8888/order'  # get from config
+VNPAY_RETURN_URL = os.getenv("VNPAY_RETURN_URL")  # get from config
 VNPAY_PAYMENT_URL = 'https://sandbox.vnpayment.vn/paymentv2/vpcpay.html'  # get from config
 VNPAY_API_URL = 'https://sandbox.vnpayment.vn/merchant_webapi/api/transaction'
-VNPAY_TMN_CODE = 'BXZ1FFWP'  # Website ID in VNPAY System, get from config
-VNPAY_HASH_SECRET_KEY = 'IQO729Q6MAIXXHLH0QHGIERNXYW6DRB0'  # Secret key for create checksum,get from config
+VNPAY_TMN_CODE = os.getenv("VNPAY_TMN_CODE")  # Website ID in VNPAY System, get from config
+VNPAY_HASH_SECRET_KEY = os.getenv("VNPAY_HASH_SECRET_KEY") # Secret key for create checksum,get from config
