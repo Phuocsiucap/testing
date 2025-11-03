@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import {BrowserRouter as Router, Routes, Route,useNavigate} from 'react-router-dom';
+import {HashRouter as Router, Routes, Route,useNavigate} from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { PublicPage, PrivatePage } from './page';
 import { LoginUser } from './redux/Actions';

@@ -208,7 +208,7 @@ USE_TZ = True  # Bật hỗ trợ múi giờ
 
 
 
-VNPAY_RETURN_URL = os.getenv("FRONT_URL") + "/order"  # get from config
+VNPAY_RETURN_URL = os.getenv("FRONT_URL") + "/#/order"  # get from config
 VNPAY_PAYMENT_URL = 'https://sandbox.vnpayment.vn/paymentv2/vpcpay.html'  # get from config
 VNPAY_API_URL = 'https://sandbox.vnpayment.vn/merchant_webapi/api/transaction'
 VNPAY_TMN_CODE = os.getenv("VNPAY_TMN_CODE")  # Website ID in VNPAY System, get from config
