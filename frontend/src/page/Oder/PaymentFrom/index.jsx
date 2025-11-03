@@ -8,7 +8,7 @@ const access_token = getCSRFTokenFromCookie("access_token");
 async function handlePaymentSubmit({ orderId, amount, orderDesc, bankCode }) {
   try {
     const response = await request1.post(
-      "/vn/payment",
+      "vn/payment",
       {
         order_id: orderId,
         amount: amount,
@@ -21,7 +21,7 @@ async function handlePaymentSubmit({ orderId, amount, orderDesc, bankCode }) {
           Authorization: `Bearer ${access_token}`,
           "Content-Type": "application/json",
         },
-        withCredentials: true,
+        // withCredentials: true,
       }
     );
     console.log("this is respone: ", response)
