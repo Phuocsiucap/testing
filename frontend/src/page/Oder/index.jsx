@@ -61,7 +61,7 @@ function Order({}) {
             Authorization: `Bearer ${access_token}`,
             "Content-Type": "application/json",
           },
-          withCredentials: true,
+          //withCredentials: true,
         });
         console.log(respone.data);
         setAddress(respone.data);
@@ -85,7 +85,7 @@ function Order({}) {
             Authorization: `Bearer ${access_token}`,
             "Content-Type": "application/json",
           },
-          withCredentials: true,
+          //withCredentials: true,
         });
 
         if (response.data?.status === "success") {
@@ -142,7 +142,7 @@ function Order({}) {
             Authorization: `Bearer ${access_token}`,
             "Content-Type": "application/json",
           },
-          // withCredentials: true,
+          // //withCredentials: true,
         }
       );
     } catch (error) {

@@ -81,7 +81,7 @@ const RevenueCharts = ({ access_token }) => {
             Authorization: `Bearer ${access_token}`,
             "Content-Type": "application/json",
           },
-          withCredentials: true,
+          // //withCredentials: true,
         });
         console.log(response);
         setDataMonth(response.data.revenues);
@@ -99,7 +99,7 @@ const RevenueCharts = ({ access_token }) => {
             Authorization: `Bearer ${access_token}`,
             "Content-Type": "application/json",
           },
-          withCredentials: true,
+          // //withCredentials: true,
         });
         // console.log(response);
         setDataWeek(response.data.revenue);

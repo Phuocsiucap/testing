@@ -13,7 +13,7 @@ const [data,setData]=useState({})
             Authorization: `Bearer ${access_token}`,
             "Content-Type": "application/json",
           },
-          withCredentials: true,
+          // //withCredentials: true,
         })
         // console.log(response)
         setData(response.data)

@@ -19,7 +19,7 @@ const OrderManagement = () => {
           Authorization: `Bearer ${access_token}`,
           "Content-Type": "application/json",
         },
-        withCredentials: true,
+        //withCredentials: true,
       });
       console.log("1",response);
       // setOrders(response.data);
@@ -68,7 +68,7 @@ const OrderManagement = () => {
             Authorization: `Bearer ${access_token}`,
             "Content-Type": "application/json",
           },
-          withCredentials: true,
+          //withCredentials: true,
         }
       )
       // console.log(response)
@@ -95,7 +95,7 @@ const OrderManagement = () => {
             Authorization: `Bearer ${access_token}`,
             "Content-Type": "application/json",
           },
-          withCredentials: true,
+          //withCredentials: true,
         });
         console.log(response);
         setOrders(response.data);

@@ -72,7 +72,7 @@ const ProductEditModal = ({ product, closeModal, saveProductChanges }) => {
           Authorization: `Bearer ${access_token}`, // Đảm bảo token đúng
           "Content-Type": "multipart/form-data",
         },
-        withCredentials: true, // Cho phép gửi cookie
+        //withCredentials: true, // Cho phép gửi cookie
       });
       console.log(response);
       if (response.status === 200) {

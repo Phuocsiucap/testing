@@ -53,7 +53,7 @@ const AddProduct= async(data)=>{
             Authorization: `Bearer ${access_token}`,  // Đảm bảo token đúng
             "Content-Type": "application/json",
           },
-          withCredentials: true,  // Cho phép gửi cookie
+          //withCredentials: true,  // Cho phép gửi cookie
         });
         
         console.log(response);
@@ -86,7 +86,7 @@ const getCart=()=>async dispatch=>{
             Authorization: `Bearer ${access_token}`,
             "Content-Type": "application/json",
           },
-          withCredentials: true,  
+          //withCredentials: true,  
         });
         dispatch({
             type: Types.ShoppingCart.GetCart,

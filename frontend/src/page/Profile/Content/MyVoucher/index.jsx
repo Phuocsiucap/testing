@@ -22,7 +22,7 @@ function Myvoucher() {
             Authorization: `Bearer ${access_token}`,
             "Content-Type": "application/json",
           },
-          withCredentials: true,
+          //withCredentials: true,
         });
         console.log(response.data);
         setVouchers(response.data);
@@ -44,7 +44,7 @@ function Myvoucher() {
             Authorization: `Bearer ${access_token}`,
             "Content-Type": "application/json",
           },
-          withCredentials: true,
+          //withCredentials: true,
         })
         console.log(response);
         
@@ -66,7 +66,7 @@ function Myvoucher() {
           Authorization: `Bearer ${access_token}`,
           "Content-Type": "application/json",
         },
-        withCredentials: true,
+        //withCredentials: true,
       })
       setVouchersUser(response.data);
 
@@ -95,7 +95,7 @@ function Myvoucher() {
             Authorization: `Bearer ${access_token}`,
             "Content-Type": "application/json",
           },
-          withCredentials: true,
+          //withCredentials: true,
         }
       );
       

@@ -42,7 +42,7 @@ function Account() {
           Authorization: `Bearer ${access_token}`,
           "Content-Type": "application/json",
         },
-        withCredentials: true,
+        //withCredentials: true,
       });
       if(respone.status===200){
         alert("Chỉnh sửa thông tin thành công");

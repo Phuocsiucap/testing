@@ -80,7 +80,7 @@ function ImageProduct({ id }) {
               Authorization: `Bearer ${access_token}`, // Đảm bảo token đúng
               "Content-Type": "application/json",
             },
-            withCredentials: true, // Cho phép gửi cookie
+            //withCredentials: true, // Cho phép gửi cookie
           }
         );
 

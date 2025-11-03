@@ -112,7 +112,7 @@ function CartShopping() {
           Authorization: `Bearer ${access_token}`,
           "Content-Type": "application/json",
         },
-        withCredentials: true,
+        //withCredentials: true,
       });
   
       // Chỉ lấy danh sách các voucher từ dữ liệu trả về

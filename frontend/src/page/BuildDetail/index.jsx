@@ -23,7 +23,7 @@ function BuildDetail() {
             Authorization: `Bearer ${access_token}`,
             "Content-Type": "application/json",
           },
-          withCredentials: true,
+          //withCredentials: true,
         });
         console.log(respone.data);
         setBuild(respone.data.order);
@@ -46,7 +46,7 @@ function BuildDetail() {
               Authorization: `Bearer ${access_token}`,
               "Content-Type": "application/json",
             },
-            withCredentials: true,
+            //withCredentials: true,
           }
         );
         

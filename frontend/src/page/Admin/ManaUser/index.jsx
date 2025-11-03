@@ -26,7 +26,7 @@ const UserList = () => {
             Authorization: `Bearer ${access_token}`,
             "Content-Type": "application/json",
           },
-          withCredentials: true,
+          //withCredentials: true,
         });
         console.log(response)
         setUsers(users.filter((user) => user.id !== id));
@@ -51,7 +51,7 @@ const UserList = () => {
             Authorization: `Bearer ${access_token}`,
             "Content-Type": "application/json",
           },
-          withCredentials: true,
+          //withCredentials: true,
         });
         console.log(response)
         setUsers(response.data);

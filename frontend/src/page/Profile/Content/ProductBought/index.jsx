@@ -15,7 +15,7 @@ function ProductBought() {
             Authorization: `Bearer ${access_token}`,
             "Content-Type": "application/json",
           },
-          withCredentials: true,
+          //withCredentials: true,
         });
         console.log(respone.data);
         setBuilds(respone.data);

@@ -40,7 +40,7 @@ const ProductList = () => {
             Authorization: `Bearer ${access_token}`,
             "Content-Type": "application/json",
           },
-          withCredentials: true,
+          //withCredentials: true,
         });
         console.log(response)
         alert("Xóa thành công");
@@ -80,7 +80,7 @@ const ProductList = () => {
             Authorization: `Bearer ${access_token}`,
             "Content-Type": "application/json",
           },
-          withCredentials: true,
+          //withCredentials: true,
         });
         console.log(response)
         setProducts(response.data)
