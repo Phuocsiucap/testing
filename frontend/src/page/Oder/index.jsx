@@ -142,7 +142,7 @@ function Order({}) {
             Authorization: `Bearer ${access_token}`,
             "Content-Type": "application/json",
           },
-          withCredentials: true,
+          // withCredentials: true,
         }
       );
     } catch (error) {
