@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { FaMapMarkerAlt } from "react-icons/fa";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { PricetoString } from "../../Component/Translate_Price";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
@@ -19,6 +19,7 @@ function Order({}) {
   const {itemsToOrder, totalPrice, selectedVoucher } = orderData;
 
   const [showPaymentReturn, setShowPaymentReturn] = useState(false)
+  const [error, setError] = useState(null)
 
   useEffect(() => {
     const queryParams = new URLSearchParams(location.search); // Lấy query string
@@ -26,7 +27,7 @@ function Order({}) {
     setShowPaymentReturn(hasQuery); // Cập nhật state
   }, [location.search]);
 
-  const [goodOrder, setGoodOrder] = useState(itemsToOrder);
+  const [goodOrder, setGoodOrder] = useState(() => itemsToOrder || []);
 
 
   const [selectAddress, setSelectAddress] = useState(() => {
@@ -45,9 +46,8 @@ function Order({}) {
   const [showAddress, setShowAddress] = useState(false);
   const access_token = getCSRFTokenFromCookie("access_token");
   const title = ["Đơn giá", "Số lượng", "Thành tiền"];
-  useEffect(() => {
-    setGoodOrder(itemsToOrder); // Gán giá trị mới cho goodOrder khi itemsToOrder thay đổi
-  }, [itemsToOrder]);
+  // Removed problematic useEffect that was causing infinite re-renders
+  // goodOrder will be initialized directly with itemsToOrder
 
   const handleOnclickShowAddress = () => {
     setShowAddress(true);
@@ -74,7 +74,7 @@ function Order({}) {
 
 
   // Hàm fetch dữ liệu thanh toán
-  const fetchPaymentData = async () => {
+  const fetchPaymentData = useCallback(async () => {
     const queryString = location.search;
     const isPaymentDataFetched = localStorage.getItem("isPaymentDataFetched");
 
@@ -102,7 +102,7 @@ function Order({}) {
         setError("Không thể kết nối tới server");
       }
     }
-  };
+  }, [location.search, access_token]);
 
   useEffect(() => {
     const queryParams = new URLSearchParams(location.search);
@@ -111,7 +111,7 @@ function Order({}) {
       setShowPaymentReturn(true);
       fetchPaymentData(); // Chỉ gọi hàm nếu có query
     }
-  }, [location.search]); // Phụ thuộc vào `location.search`
+  }, [fetchPaymentData]); // Use fetchPaymentData as dependency since it's memoized with useCallback
   
   
   const HandleOnclickOrder = async () => {
