@@ -68,7 +68,7 @@ MIDDLEWARE = [
     # tạo phuong thức xác thục
     'customer.middlewares.JWTAuthenticationMiddleware',
     'customer.middlewares.DisableCSRFMiddleware',
-    
+    'middlewares.RateLimitMiddleware',
    
 ]
 CACHES = {
@@ -89,17 +89,7 @@ CORS_ALLOW_ALL_ORIGINS = True  # Chỉ nên sử dụng trong môi trường ph�
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny',
-    ],
-    "DEFAULT_THROTTLE_CLASSES": [
-        "rest_framework.throttling.AnonRateThrottle",
-        "rest_framework.throttling.UserRateThrottle",
-    ],
-    "DEFAULT_THROTTLE_RATES": {
-        "anon": "5/second",
-        "user": "20/second",
-    },
-
-
+    ]
 }
 
 
