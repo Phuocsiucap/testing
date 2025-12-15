@@ -1,0 +1,347 @@
+============================= test session starts =============================
+platform win32 -- Python 3.11.9, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\Acer\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\python.exe
+cachedir: .pytest_cache
+rootdir: D:\testing\demo_test
+plugins: anyio-4.11.0
+collecting ... collected 6 items
+
+test_cart.py::test_add_to_cart_success_TC04 
+--- TC04: Add to Cart Success ---
+[STEP] Bat dau them san pham vao gio...
+   -> Dang cho danh sach san pham load...
+   -> Da tim thay 15 san pham. Chon san pham dau tien.
+   -> Click vao san pham (JS)...
+   -> Da chuyen sang trang chi tiet san pham.
+   -> Tim nut 'Them vao gio hang'...
+   -> Click nut 'Them vao gio hang' (Normal click)...
+   -> Dang xu ly alert xac nhan (Alert 1)...
+   -> Alert 1: False, Noi dung: None
+   [WARN] Khong thay alert xac nhan. Kiem tra log browser...
+
+   [BROWSER LOGS]:
+   -> DEBUG: http://localhost:8889/@vite/client 494:8 "[vite] connecting..."
+   -> DEBUG: http://localhost:8889/@vite/client 613:14 "[vite] connected."
+   -> INFO: http://localhost:8889/node_modules/.vite/deps/chunk-QT63QQJV.js?v=e8378c22 21550:24 "%cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools" "font-weight:bold"
+   -> WARNING: http://localhost:8889/node_modules/.vite/deps/autoprefixer.js?v=e8378c22 108:18 "Module \"path\" has been externalized for browser compatibility. Cannot access \"path.isAbsolute\" in client code. See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details."
+   -> WARNING: http://localhost:8889/node_modules/.vite/deps/autoprefixer.js?v=e8378c22 108:18 "Module \"path\" has been externalized for browser compatibility. Cannot access \"path.resolve\" in client code. See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details."
+   -> WARNING: http://localhost:8889/node_modules/.vite/deps/autoprefixer.js?v=e8378c22 2809:18 "Module \"source-map-js\" has been externalized for browser compatibility. Cannot access \"source-map-js.SourceMapConsumer\" in client code. See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details."
+   -> WARNING: http://localhost:8889/node_modules/.vite/deps/autoprefixer.js?v=e8378c22 2809:18 "Module \"source-map-js\" has been externalized for browser compatibility. Cannot access \"source-map-js.SourceMapGenerator\" in client code. See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details."
+   -> WARNING: http://localhost:8889/node_modules/.vite/deps/autoprefixer.js?v=e8378c22 2822:18 "Module \"url\" has been externalized for browser compatibility. Cannot access \"url.fileURLToPath\" in client code. See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details."
+   -> WARNING: http://localhost:8889/node_modules/.vite/deps/autoprefixer.js?v=e8378c22 2822:18 "Module \"url\" has been externalized for browser compatibility. Cannot access \"url.pathToFileURL\" in client code. See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details."
+   -> WARNING: http://localhost:8889/node_modules/.vite/deps/autoprefixer.js?v=e8378c22 2835:18 "Module \"fs\" has been externalized for browser compatibility. Cannot access \"fs.existsSync\" in client code. See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details."
+   -> WARNING: http://localhost:8889/node_modules/.vite/deps/autoprefixer.js?v=e8378c22 2835:18 "Module \"fs\" has been externalized for browser compatibility. Cannot access \"fs.readFileSync\" in client code. See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details."
+   -> WARNING: http://localhost:8889/node_modules/.vite/deps/autoprefixer.js?v=e8378c22 108:18 "Module \"path\" has been externalized for browser compatibility. Cannot access \"path.dirname\" in client code. See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details."
+   -> WARNING: http://localhost:8889/node_modules/.vite/deps/autoprefixer.js?v=e8378c22 108:18 "Module \"path\" has been externalized for browser compatibility. Cannot access \"path.join\" in client code. See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details."
+   -> WARNING: http://localhost:8889/node_modules/.vite/deps/autoprefixer.js?v=e8378c22 2809:18 "Module \"source-map-js\" has been externalized for browser compatibility. Cannot access \"source-map-js.SourceMapConsumer\" in client code. See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details."
+   -> WARNING: http://localhost:8889/node_modules/.vite/deps/autoprefixer.js?v=e8378c22 2809:18 "Module \"source-map-js\" has been externalized for browser compatibility. Cannot access \"source-map-js.SourceMapGenerator\" in client code. See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details."
+   -> WARNING: http://localhost:8889/node_modules/.vite/deps/autoprefixer.js?v=e8378c22 108:18 "Module \"path\" has been externalized for browser compatibility. Cannot access \"path.dirname\" in client code. See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details."
+   -> WARNING: http://localhost:8889/node_modules/.vite/deps/autoprefixer.js?v=e8378c22 108:18 "Module \"path\" has been externalized for browser compatibility. Cannot access \"path.relative\" in client code. See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details."
+   -> WARNING: http://localhost:8889/node_modules/.vite/deps/autoprefixer.js?v=e8378c22 108:18 "Module \"path\" has been externalized for browser compatibility. Cannot access \"path.resolve\" in client code. See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details."
+   -> WARNING: http://localhost:8889/node_modules/.vite/deps/autoprefixer.js?v=e8378c22 108:18 "Module \"path\" has been externalized for browser compatibility. Cannot access \"path.sep\" in client code. See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details."
+   -> WARNING: http://localhost:8889/node_modules/.vite/deps/autoprefixer.js?v=e8378c22 2809:18 "Module \"source-map-js\" has been externalized for browser compatibility. Cannot access \"source-map-js.SourceMapConsumer\" in client code. See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details."
+   -> WARNING: http://localhost:8889/node_modules/.vite/deps/autoprefixer.js?v=e8378c22 2809:18 "Module \"source-map-js\" has been externalized for browser compatibility. Cannot access \"source-map-js.SourceMapGenerator\" in client code. See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details."
+   -> WARNING: http://localhost:8889/node_modules/.vite/deps/autoprefixer.js?v=e8378c22 2822:18 "Module \"url\" has been externalized for browser compatibility. Cannot access \"url.pathToFileURL\" in client code. See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details."
+   -> DEBUG: http://localhost:8889/#/login - [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o
+   -> INFO: http://localhost:8889/src/page/Home/content/Laptop/index.jsx 62:10 "good" Array(0)
+   -> INFO: http://localhost:8889/src/page/Home/content/Laptop/index.jsx 62:10 "good" Array(0)
+   -> INFO: http://localhost:8889/src/page/Home/content/Laptop/index.jsx 62:10 "good" Array(0)
+   -> INFO: http://localhost:8889/src/page/Home/content/Laptop/index.jsx 62:10 "good" Array(0)
+   -> INFO: http://localhost:8889/src/page/Home/content/Laptop/index.jsx 62:10 "good" Array(77)
+   -> INFO: http://localhost:8889/src/page/Home/content/Laptop/index.jsx 62:10 "good" Array(77)
+   -> INFO: http://localhost:8889/src/page/Home/content/Laptop/index.jsx 62:10 "good" Array(77)
+   -> INFO: http://localhost:8889/src/page/Home/content/Laptop/index.jsx 62:10 "good" Array(77)
+   -> INFO: http://localhost:8889/src/page/Home/content/Laptop/index.jsx 62:10 "good" Array(77)
+   -> INFO: http://localhost:8889/src/page/Home/content/Laptop/index.jsx 62:10 "good" Array(77)
+   -> INFO: http://localhost:8889/src/page/Home/content/Laptop/index.jsx 62:10 "good" Array(77)
+   -> INFO: http://localhost:8889/src/page/Home/content/Laptop/index.jsx 62:10 "good" Array(77)
+   -> INFO: http://localhost:8889/src/page/Product/ImageProduct/index.jsx 108:10 "product " Object
+   -> INFO: http://localhost:8889/src/page/Product/ImageProduct/index.jsx 108:10 "product " Object
+   -> INFO: http://localhost:8889/src/page/Home/content/Laptop/index.jsx 62:10 "good" Array(0)
+   -> INFO: http://localhost:8889/src/page/Home/content/Laptop/index.jsx 62:10 "good" Array(0)
+   -> INFO: http://localhost:8889/src/page/Product/ImageProduct/index.jsx 45:16 "1" Object
+   -> INFO: http://localhost:8889/src/page/Product/ImageProduct/index.jsx 45:16 "1" Object
+   -> INFO: http://localhost:8889/src/page/Product/ImageProduct/index.jsx 108:10 "product " Object
+   -> INFO: http://localhost:8889/src/page/Product/ImageProduct/index.jsx 108:10 "product " Object
+   -> INFO: http://localhost:8889/src/page/Home/content/Laptop/index.jsx 62:10 "good" Array(77)
+   -> INFO: http://localhost:8889/src/page/Home/content/Laptop/index.jsx 62:10 "good" Array(77)
+   -> INFO: http://localhost:8889/src/page/Home/content/Laptop/index.jsx 62:10 "good" Array(77)
+   -> INFO: http://localhost:8889/src/page/Home/content/Laptop/index.jsx 62:10 "good" Array(77)
+   -> INFO: http://localhost:8889/src/page/Home/content/Laptop/index.jsx 62:10 "good" Array(77)
+   -> INFO: http://localhost:8889/src/page/Home/content/Laptop/index.jsx 62:10 "good" Array(77)
+   -> INFO: http://localhost:8889/src/page/Home/content/Laptop/index.jsx 62:10 "good" Array(77)
+   -> INFO: http://localhost:8889/src/page/Home/content/Laptop/index.jsx 62:10 "good" Array(77)
+FAILED
+test_cart.py::test_view_cart_items_TC01 
+--- TC01: View Cart Items ---
+[PASS] Cart has 1 items.
+PASSED
+test_cart.py::test_update_quantity 
+--- TC Update: Update Quantity ---
+[STEP] Da thay san pham trong gio.
+[STEP] Tim container so luong...
+[FAIL] Loi test update quantity: 'charmap' codec can't encode character '\u1ed1' in position 26: character maps to <undefined>
+FAILED
+test_cart.py::test_select_items 
+--- TC Select: Select Items ---
+[STEP] Tim checkbox san pham...
+   -> Trang thai checkbox ban dau: False
+[STEP] Click checkbox...
+   -> Trang thai checkbox sau khi click: False
+[WARN] Checkbox chua doi trang thai. Thu click truc tiep vao input...
+   -> Trang thai sau khi click input: True
+[PASS] Checkbox da thay doi trang thai.
+[STEP] Tim nut 'Chon tat ca'...
+[STEP] Click nut 'Chon tat ca'...
+[PASS] Da click nut 'Chon tat ca'.
+PASSED
+test_cart.py::test_delete_from_cart_TC_EXTRA 
+--- TC Extra: Delete Item ---
+[STEP] Tim cac nut Xoa...
+   -> So luong nut xoa tim thay: 1
+[STEP] Scroll va click nut Xoa dau tien...
+[STEP] Cho alert xac nhan...
+   -> Alert xuat hien: False, Noi dung: None
+[FAIL] Loi test xoa san pham: Delete confirmation not shown
+assert False
+FAILED
+test_cart.py::test_add_invalid_quantity_TC06 
+--- TC06: Invalid Quantity ---
+[SKIP] TC06 failed due to UI/Selector issues: Message: 
+
+PASSED
+
+================================== FAILURES ===================================
+________________________ test_add_to_cart_success_TC04 ________________________
+
+driver = <selenium.webdriver.chrome.webdriver.WebDriver (session="1f87bc151dc9551604852c2d65c57103")>
+
+    def test_add_to_cart_success_TC04(driver):
+        """TC04: Th\xeam s\u1ea3n ph\u1ea9m th\xe0nh c\xf4ng"""
+        print("\n--- TC04: Add to Cart Success ---")
+        login_user(driver)
+    
+        is_alert, text = add_product_to_cart(driver)
+    
+        if is_alert and ("thαnh c⌠ng" in text.lower() or "success" in text.lower()):
+            print(f"[PASS] Alert success: {text}")
+        else:
+            if "cartshopping" in driver.current_url:
+                 print("[WARN] No alert but redirected to cart.")
+            else:
+>                pytest.fail(f"[FAIL] Alert not success: {text}")
+E                Failed: [FAIL] Alert not success: No confirm alert
+
+test_cart.py:189: Failed
+____________________________ test_update_quantity _____________________________
+
+driver = <selenium.webdriver.chrome.webdriver.WebDriver (session="1f87bc151dc9551604852c2d65c57103")>
+
+    def test_update_quantity(driver):
+        """TC Update: T\u0103ng/Gi\u1ea3m s\u1ed1 l\u01b0\u1ee3ng"""
+        print("\n--- TC Update: Update Quantity ---")
+        login_user(driver)
+        open_cart_page(driver)
+    
+        # Ensure at least 1 item
+        try:
+            WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.XPATH, "//input[@type='checkbox']")))
+            print("[STEP] Da thay san pham trong gio.")
+        except:
+            print("[STEP] Gio hang trong, dang them san pham...")
+            add_product_to_cart(driver)
+            open_cart_page(driver)
+    
+        try:
+            print("[STEP] Tim container so luong...")
+            # Try finding by class or structure if text fails
+            # Using contains(., 'S\u1ed1 l\u01b0\u1ee3ng') checks all text inside element
+            qty_p = WebDriverWait(driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, "//p[contains(., 'S\u1ed1 l\u01b0\u1ee3ng')]"))
+            )
+    
+            initial_text = qty_p.text
+>           print(f"   -> So luong ban dau: '{initial_text}'")
+
+test_cart.py:235: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <encodings.cp1252.IncrementalEncoder object at 0x0000013E6EA88D90>
+input = "   -> So luong ban dau: 'S\u1ed1 l\u01b0\u1ee3ng:\\r\\n2'", final = False
+
+    def encode(self, input, final=False):
+>       return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       UnicodeEncodeError: 'charmap' codec can't encode character '\u1ed1' in position 26: character maps to <undefined>
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py:19: UnicodeEncodeError
+
+During handling of the above exception, another exception occurred:
+
+driver = <selenium.webdriver.chrome.webdriver.WebDriver (session="1f87bc151dc9551604852c2d65c57103")>
+
+    def test_update_quantity(driver):
+        """TC Update: T\u0103ng/Gi\u1ea3m s\u1ed1 l\u01b0\u1ee3ng"""
+        print("\n--- TC Update: Update Quantity ---")
+        login_user(driver)
+        open_cart_page(driver)
+    
+        # Ensure at least 1 item
+        try:
+            WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.XPATH, "//input[@type='checkbox']")))
+            print("[STEP] Da thay san pham trong gio.")
+        except:
+            print("[STEP] Gio hang trong, dang them san pham...")
+            add_product_to_cart(driver)
+            open_cart_page(driver)
+    
+        try:
+            print("[STEP] Tim container so luong...")
+            # Try finding by class or structure if text fails
+            # Using contains(., 'S\u1ed1 l\u01b0\u1ee3ng') checks all text inside element
+            qty_p = WebDriverWait(driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, "//p[contains(., 'S\u1ed1 l\u01b0\u1ee3ng')]"))
+            )
+    
+            initial_text = qty_p.text
+            print(f"   -> So luong ban dau: '{initial_text}'")
+    
+            svgs = qty_p.find_elements(By.TAG_NAME, "svg")
+            if len(svgs) < 2:
+                pytest.fail(f"[FAIL] Khong tim thay du icon +/-. Tim thay {len(svgs)} icon.")
+    
+            minus_btn = svgs[0]
+            plus_btn = svgs[1]
+    
+            # Click Plus
+            print("[STEP] Click nut Tang (+)...")
+            driver.execute_script("arguments[0].click();", plus_btn)
+            time.sleep(3)
+    
+            # Verify Increase
+            qty_p = driver.find_element(By.XPATH, "//p[contains(., 'S\u1ed1 l\u01b0\u1ee3ng')]")
+            new_text = qty_p.text
+            print(f"   -> So luong sau khi tang: '{new_text}'")
+    
+            assert new_text != initial_text, "Quantity did not change after clicking Plus"
+            print("[PASS] So luong da tang.")
+    
+            # Click Minus
+            print("[STEP] Click nut Giam (-)...")
+            svgs = qty_p.find_elements(By.TAG_NAME, "svg")
+            minus_btn = svgs[0]
+            driver.execute_script("arguments[0].click();", minus_btn)
+            time.sleep(3)
+    
+            # Verify Decrease
+            qty_p = driver.find_element(By.XPATH, "//p[contains(., 'S\u1ed1 l\u01b0\u1ee3ng')]")
+            final_text = qty_p.text
+            print(f"   -> So luong sau khi giam: '{final_text}'")
+    
+            print("[PASS] So luong da giam.")
+    
+        except Exception as e:
+            print(f"[FAIL] Loi test update quantity: {e}")
+>           pytest.fail(f"Update quantity failed: {e}")
+E           Failed: Update quantity failed: 'charmap' codec can't encode character '\u1ed1' in position 26: character maps to <undefined>
+
+test_cart.py:273: Failed
+_______________________ test_delete_from_cart_TC_EXTRA ________________________
+
+driver = <selenium.webdriver.chrome.webdriver.WebDriver (session="1f87bc151dc9551604852c2d65c57103")>
+
+    def test_delete_from_cart_TC_EXTRA(driver):
+        """TC Extra: X\xf3a s\u1ea3n ph\u1ea9m"""
+        print("\n--- TC Extra: Delete Item ---")
+        login_user(driver)
+        open_cart_page(driver)
+    
+        delete_xpath = "//span[contains(@class, 'text-red-500') and contains(@class, 'cursor-pointer') and contains(text(), 'X')]"
+    
+        print("[STEP] Tim cac nut Xoa...")
+        items = driver.find_elements(By.XPATH, delete_xpath)
+        if not items:
+            print("   -> Khong thay nut xoa, dang them san pham...")
+            add_product_to_cart(driver)
+            open_cart_page(driver)
+            items = driver.find_elements(By.XPATH, delete_xpath)
+    
+        try:
+            initial_count = len(items)
+            print(f"   -> So luong nut xoa tim thay: {initial_count}")
+            if initial_count == 0:
+                 pytest.fail("[FAIL] Khong tim thay san pham de xoa.")
+    
+            delete_btn = items[0]
+            print("[STEP] Scroll va click nut Xoa dau tien...")
+            driver.execute_script("arguments[0].scrollIntoView();", delete_btn)
+            time.sleep(0.5)
+            driver.execute_script("arguments[0].click();", delete_btn)
+    
+            print("[STEP] Cho alert xac nhan...")
+            is_alert, text = handle_alert(driver)
+            print(f"   -> Alert xuat hien: {is_alert}, Noi dung: {text}")
+>           assert is_alert, "Delete confirmation not shown"
+E           AssertionError: Delete confirmation not shown
+E           assert False
+
+test_cart.py:352: AssertionError
+
+During handling of the above exception, another exception occurred:
+
+driver = <selenium.webdriver.chrome.webdriver.WebDriver (session="1f87bc151dc9551604852c2d65c57103")>
+
+    def test_delete_from_cart_TC_EXTRA(driver):
+        """TC Extra: X\xf3a s\u1ea3n ph\u1ea9m"""
+        print("\n--- TC Extra: Delete Item ---")
+        login_user(driver)
+        open_cart_page(driver)
+    
+        delete_xpath = "//span[contains(@class, 'text-red-500') and contains(@class, 'cursor-pointer') and contains(text(), 'X')]"
+    
+        print("[STEP] Tim cac nut Xoa...")
+        items = driver.find_elements(By.XPATH, delete_xpath)
+        if not items:
+            print("   -> Khong thay nut xoa, dang them san pham...")
+            add_product_to_cart(driver)
+            open_cart_page(driver)
+            items = driver.find_elements(By.XPATH, delete_xpath)
+    
+        try:
+            initial_count = len(items)
+            print(f"   -> So luong nut xoa tim thay: {initial_count}")
+            if initial_count == 0:
+                 pytest.fail("[FAIL] Khong tim thay san pham de xoa.")
+    
+            delete_btn = items[0]
+            print("[STEP] Scroll va click nut Xoa dau tien...")
+            driver.execute_script("arguments[0].scrollIntoView();", delete_btn)
+            time.sleep(0.5)
+            driver.execute_script("arguments[0].click();", delete_btn)
+    
+            print("[STEP] Cho alert xac nhan...")
+            is_alert, text = handle_alert(driver)
+            print(f"   -> Alert xuat hien: {is_alert}, Noi dung: {text}")
+            assert is_alert, "Delete confirmation not shown"
+    
+            time.sleep(2)
+            print("[STEP] Kiem tra lai danh sach sau khi xoa...")
+            new_items = driver.find_elements(By.XPATH, delete_xpath)
+            print(f"   -> So luong nut xoa con lai: {len(new_items)}")
+    
+            if len(new_items) < initial_count:
+                print("[PASS] Xoa san pham thanh cong.")
+            else:
+                print(f"[WARN] So luong khong giam. Cu: {initial_count}, Moi: {len(new_items)}")
+    
+        except Exception as e:
+            print(f"[FAIL] Loi test xoa san pham: {e}")
+>           pytest.fail(f"Delete failed: {e}")
+E           Failed: Delete failed: Delete confirmation not shown
+E           assert False
+
+test_cart.py:366: Failed
+=========================== short test summary info ===========================
+FAILED test_cart.py::test_add_to_cart_success_TC04 - Failed: [FAIL] Alert not...
+FAILED test_cart.py::test_update_quantity - Failed: Update quantity failed: '...
+FAILED test_cart.py::test_delete_from_cart_TC_EXTRA - Failed: Delete failed: ...
+=================== 3 failed, 3 passed in 83.21s (0:01:23) ====================

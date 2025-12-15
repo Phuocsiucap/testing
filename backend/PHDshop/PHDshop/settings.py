@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'Voucher',
     'Admin',
     'vnpay_python',
+    
 ]
 
 MIDDLEWARE = [
@@ -67,6 +68,7 @@ MIDDLEWARE = [
     # tạo phuong thức xác thục
     'customer.middlewares.JWTAuthenticationMiddleware',
     'customer.middlewares.DisableCSRFMiddleware',
+    'middlewares.RateLimitMiddleware',
    
 ]
 
@@ -179,7 +181,7 @@ SIMPLE_JWT = {
 
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:5173',  # Your React app URL
+    'http://localhost:8888',  # Your React app URL
     os.getenv("FRONT_URL")
 ]
 
