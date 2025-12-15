@@ -68,7 +68,7 @@ MIDDLEWARE = [
     # tạo phuong thức xác thục
     'customer.middlewares.JWTAuthenticationMiddleware',
     'customer.middlewares.DisableCSRFMiddleware',
-    'middlewares.RateLimitMiddleware',
+    # 'middlewares.RateLimitMiddleware',
    
 ]
 
@@ -78,11 +78,25 @@ MIDDLEWARE = [
 CORS_ALLOW_ALL_ORIGINS = True  # Chỉ nên sử dụng trong môi trường phát triển
 
 
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": os.environ.get("REDIS_URL", "redis://127.0.0.1:6379/0"),
+    }
+}
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny',
-    ]
+    ],
+    "DEFAULT_THROTTLE_CLASSES": [
+        "rest_framework.throttling.AnonRateThrottle",
+        "rest_framework.throttling.UserRateThrottle",
+    ],
+    "DEFAULT_THROTTLE_RATES": {
+        "anon": "5/second",
+        "user": "20/second",
+    },
 }
 
 
