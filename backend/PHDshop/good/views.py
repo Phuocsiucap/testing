@@ -7,14 +7,19 @@ from rest_framework.permissions import AllowAny
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
+from rest_framework.throttling import AnonRateThrottle, UserRateThrottle
+import logging
+
+logger = logging.getLogger(__name__)
 
 class GoodListView(APIView):
-    permission_classes  = [AllowAny]
+    permission_classes = [AllowAny]
+    throttle_classes = [AnonRateThrottle, UserRateThrottle]  # Thêm throttle trực tiếp
 
-    def get(sefl, request):
-  
+    def get(self, request):
+        logger.info(f"Request to /api/goods/list from {request.META.get('REMOTE_ADDR')} - User: {request.user}")
         goods = Good.objects.all()
-        serializer_class = GoodSerializer(goods, many = True)
+        serializer_class = GoodSerializer(goods, many=True)
         return Response(serializer_class.data, status=status.HTTP_200_OK)
    
 
