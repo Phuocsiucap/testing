@@ -71,14 +71,7 @@ MIDDLEWARE = [
     'middlewares.RateLimitMiddleware',
    
 ]
-CACHES = {
-    "default": {
-        "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": os.environ["REDIS_URL"],
-    }
-}
-USE_X_FORWARDED_HOST = True
-SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+
 
 
 # Đảm bảo rằng bạn cấu hình đúng CORS nếu frontend và backend khác domain
