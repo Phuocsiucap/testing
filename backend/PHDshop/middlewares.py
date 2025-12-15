@@ -13,7 +13,7 @@ class RateLimitMiddleware:
 
         data = cache.get(key, {'count': 0, 'time': now})
 
-        if data["time"] = now:
+        if data["time"] == now:
             data["count"] += 1
         else:
             data = {"count": 1, "time": now}
