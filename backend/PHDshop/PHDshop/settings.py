@@ -68,9 +68,18 @@ MIDDLEWARE = [
     # tạo phuong thức xác thục
     'customer.middlewares.JWTAuthenticationMiddleware',
     'customer.middlewares.DisableCSRFMiddleware',
-    'middlewares.RateLimitMiddleware',
+    
    
 ]
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": os.environ["REDIS_URL"],
+    }
+}
+USE_X_FORWARDED_HOST = True
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+
 
 # Đảm bảo rằng bạn cấu hình đúng CORS nếu frontend và backend khác domain
 CORS_ALLOW_ALL_ORIGINS = True  # Chỉ nên sử dụng trong môi trường phát triển
@@ -80,7 +89,17 @@ CORS_ALLOW_ALL_ORIGINS = True  # Chỉ nên sử dụng trong môi trường ph�
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny',
-    ]
+    ],
+    "DEFAULT_THROTTLE_CLASSES": [
+        "rest_framework.throttling.AnonRateThrottle",
+        "rest_framework.throttling.UserRateThrottle",
+    ],
+    "DEFAULT_THROTTLE_RATES": {
+        "anon": "5/second",
+        "user": "20/second",
+    },
+
+
 }
 
 
