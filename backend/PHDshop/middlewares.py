@@ -26,7 +26,7 @@ class RateLimitMiddleware:
 
         if data["count"] > self.RATE:
             return JsonResponse(
-                {"error": "Duy đẹp trai"},
+                {"error": "request limit exceeded"},
                 status=429
             )
 

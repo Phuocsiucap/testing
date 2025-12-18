@@ -68,14 +68,14 @@ MIDDLEWARE = [
     # tạo phuong thức xác thục
     'customer.middlewares.JWTAuthenticationMiddleware',
     'customer.middlewares.DisableCSRFMiddleware',
-    # 'middlewares.RateLimitMiddleware',
+    'middlewares.RateLimitMiddleware',
    
 ]
-CACHES = {
-    "default": {
-        "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
-    }
-}
+# CACHES = {
+#     "default": {
+#         "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
+#     }
+# }
 
 
 
